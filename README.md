@@ -17,9 +17,9 @@ In this assignment you will build and evaluate several machine learning models t
 
 The completed code files are as follows:
 
-[Resampling Notebook](Credit_risk_resampling.ipynb)
+[Resampling Notebook](https://github.com/sarahm44/unit-11-assignment/blob/main/credit_risk_resampling.ipynb)
 
-[Ensemble Notebook](credit_risk_ensemble.ipynb)
+[Ensemble Notebook](https://github.com/sarahm44/unit-11-assignment/blob/main/credit_risk_ensemble.ipynb)
 
 - - -
 
