@@ -1,6 +1,6 @@
 # Credit Risk Predictor
  
-![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/credit-risk.png)
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/credit-risk.jpg)
 
 ## Overview
 
