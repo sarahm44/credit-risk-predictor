@@ -8,7 +8,7 @@ This task required that I build and evaluate several machine learning models to 
 
 Credit risk is an inherently imbalanced classification problem (the number of good loans is much larger than the number of at-risk loans), so I employed different techniques for training and evaluating models with imbalanced classes. 
 
-I used the [imbalanced-learn](https://imbalanced-learn.org/stable/) and Scikit-learn libraries to build and evaluate models using the two following techniques, each contained in their own code file:
+I used the [imbalanced-learn](https://imbalanced-learn.org/stable/) and [Scikit-learn](https://scikit-learn.org/stable/) libraries to build and evaluate models using the two following techniques, each contained in their own code file:
 
 1. [Resampling](https://github.com/sarahm44/credit-risk-predictor/blob/main/credit_risk_resampling.ipynb)
 2. [Ensemble Learning](https://github.com/sarahm44/credit-risk-predictor/blob/main/credit_risk_ensemble.ipynb)
@@ -100,39 +100,60 @@ Naive random oversampling, SMOTE oversampling and combination sampling with SMOT
    
 Every model had the same geometric mean score.
 
-### Ensemble Learning
+## Ensemble Learning
 
-#### 1. Which model had the best balanced accuracy score?
+In this section, I trained and compared two different ensemble classifiers to predict loan risk and evaluate each model. 
 
-   The balanced accuracy scores were as follows - 
+These were: 
+* Balanced Random Forest Classifier 
+* Easy Ensemble Classifier
 
-   * Balanced Random Forest Classifier: 0.795829959187949
-   * Easy Ensemble Classifier: 0.9263912558266958
+I generated the balanced accuracy score, confusion matrix and classification report for each.
+
+### Balanced Random Forest
+
+See the Balanced Random Forest Classifier results below:
+
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/random_forest.png)
+
+### Easy Ensemble Classifier
+
+See the Easy Ensemble Classifier results below:
+
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/easy_ensemble.png)
+
+### Conclusions
+
+#### Best Balanced Accuracy Score
+
+| Model | Balanced Accuracy Score |
+| --- | --- |
+| Balanced Random Forest Classifier | 0.795829959187949 |
+|Easy Ensemble Classifier | 0.9263912558266958 |
    
-   Easy Ensemble Classifier had the best balanced accuracy score.
+Easy Ensemble Classifier had the best balanced accuracy score.
 
-#### 2. Which model had the best recall score?
+#### Best Recall Score
 
-   The recall scores were as follows - 
-
-   * Balanced Random Forest Classifier: high risk: 0.71, low risk: 0.88, average: 0.88
-   * Easy Ensemble Classifier: high risk: 0.91, low risk: 0.94, average: 0.94
+| Model | High Risk | Low Risk | Average |
+| --- | --- | --- | --- |
+| Balanced Random Forest Classifier | 0.71 | 0.88 | 0.88 |
+| Easy Ensemble Classifier | 0.91 | 0.94 | 0.94 |
    
-   Easy Ensemble Classifier had the best recall score.
+Easy Ensemble Classifier had the best recall score.
 
-#### 3. Which model had the best geometric mean score?
+#### Best Geometric Mean Score
 
-   The geometric mean scores were as follows - 
-
-   * Balanced Random Forest Classifier: high risk: 0.79, low risk: 0.79, average: 0.79
-   * Easy Ensemble Classifier: high risk: 0.93, low risk: 0.93, average: 0.93
+| Model | High Risk | Low Risk | Average |
+| --- | --- | --- | --- |
+| Balanced Random Forest Classifier | 0.79 | 0.79 | 0.79 |
+| Easy Ensemble Classifier | 0.93 | 0.93 | 0.93 |
    
-   Easy Ensemble Classifier had the best geometric mean score.
+Easy Ensemble Classifier had the best geometric mean score.
 
-#### 4. What are the top three features?
+#### Top three features
 
-   The top three features are: 
-   
+The top three features are:    
    * total_rec_prncp
    * total_rec_int
    * total_pymnt_in
