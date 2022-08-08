@@ -71,8 +71,8 @@ See the SMOTEENN algorithm results below:
 | Simple logistic regression | 0.9892813049736127 |
 | Naive random oversampling | 0.9946414201183431 |
 | SMOTE oversampling | 0.9946680739911509 |
-| Undersampling | 0.9932813049736127 |
-| Combination sampling with SMOTEENN | 0.9946680739911509 |
+| Cluster Centroids undersampling | 0.9932813049736127 |
+| SMOTEENN combination sampling | 0.9946680739911509 |
    
 SMOTE oversampling and combination sampling with SMOTEENN had the best balanced accuracy scores.
 
@@ -83,10 +83,10 @@ SMOTE oversampling and combination sampling with SMOTEENN had the best balanced 
 | Simple logistic regression | 0.98 | 0.99 | 0.99 |
 | Naive random oversampling | 1.00 | 0.99 | 0.99 | 
 | SMOTE oversampling | 1.00 | 0.99 | 0.99 |
-| Undersampling | 0.99 | 0.99 | 0.99 |
-| Combination sampling with SMOTEENN | 1.00 | 0.99 | 0.99 |
+| Cluster Centroids undersampling | 0.99 | 0.99 | 0.99 |
+| SMOTEENN combination sampling | 1.00 | 0.99 | 0.99 |
    
-Naive random oversampling, SMOTE oversampling and Combination sampling with SMOTEENN have the best recall scores.
+Naive random oversampling, SMOTE oversampling and combination sampling with SMOTEENN have the best recall scores.
 
 #### Best Geometric Mean Score
 
@@ -95,8 +95,8 @@ Naive random oversampling, SMOTE oversampling and Combination sampling with SMOT
 | Simple logistic regression | 0.99 | 0.99 | 0.99 |
 | Naive random oversampling | 0.99 | 0.99 | 0.99 |
 | SMOTE oversampling | 0.99 | 0.99 | 0.99 |
-| Undersampling | 0.99, | 0.99 | 0.99 |
-| Combination sampling with SMOTEENN | 0.99 | 0.99 | 0.99 |
+| Cluster Centroids undersampling | 0.99, | 0.99 | 0.99 |
+| SMOTEENN combination sampling | 0.99 | 0.99 | 0.99 |
    
 Every model had the same geometric mean score.
 
