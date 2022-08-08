@@ -1,6 +1,6 @@
 # Credit Risk Predictor
  
-![Credit Risk](credit-risk.jpg)
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/credit-risk.png)
 
 ## Overview
 
@@ -8,52 +8,97 @@ This task required that I build and evaluate several machine learning models to 
 
 Credit risk is an inherently imbalanced classification problem (the number of good loans is much larger than the number of at-risk loans), so I employed different techniques for training and evaluating models with imbalanced classes. 
 
-I used the imbalanced-learn and Scikit-learn libraries to build and evaluate models using the two following techniques, each contained in their own code file:
+I used the [imbalanced-learn](https://imbalanced-learn.org/stable/) and Scikit-learn libraries to build and evaluate models using the two following techniques, each contained in their own code file:
 
-1. [Resampling](https://github.com/sarahm44/unit-11-assignment/blob/main/credit_risk_resampling.ipynb)
-2. [Ensemble Learning](https://github.com/sarahm44/unit-11-assignment/blob/main/credit_risk_ensemble.ipynb)
+1. [Resampling](https://github.com/sarahm44/credit-risk-predictor/blob/main/credit_risk_resampling.ipynb)
+2. [Ensemble Learning](https://github.com/sarahm44/credit-risk-predictor/blob/main/credit_risk_ensemble.ipynb)
 
+## Resampling
 
-- - -
+### Logistic Regression
 
-## Final Questions Summary
+I completed a simple linear regression. I then generated the balanced accuracy score, confusion matrix and classification report, as below:
 
-### Resampling
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/logistic_regression.png)
 
-#### 1. Which model had the best balanced accuracy score?
+### Oversampling
+In this section, I compared two oversampling algorithms to determine which algorithm results in the best performance. 
 
-   The balanced accuracy scores were as follows - 
+These algorithms were: 
+* naive random oversampling algorithm
+* SMOTE algorithm. 
 
-   * Simple logistic regression: 0.9892813049736127
-   * Naive random oversampling: 0.9946414201183431
-   * SMOTE oversampling: 0.9946680739911509
-   * Undersampling: 0.9932813049736127
-   * Combination sampling with SMOTEENN: 0.9946680739911509
+I then generated the balanced accuracy score, confusion matrix and classification report for each.
+
+See naive random oversampling algorithm results below:
+
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/nro.png)
+
+See SMOTE algorithm results below:
+
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/smote.png)
+
+### Undersampling
+
+In this section, I tested an undersampling algorithm to determine which algorithm results in the best performance compared to the oversampling algorithms above. 
+
+I undersampled the data using the Cluster Centroids algorithm.
+
+I then generated the balanced accuracy score, confusion matrix and classification report.
+
+See Cluster Centroids algorithm results below:
+
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/cc.png)
+
+### Combination Sampling
+
+In this section, I tested a combination over- and under-sampling algorithm to determine if the algorithm results in the best performance compared to the other sampling algorithms above. 
+
+I resampled the data using the SMOTEENN algorithm.
+
+I then generated the balanced accuracy score, confusion matrix and classification report.
+
+See the SMOTEENN algorithm results below:
+
+![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/smoteenn.png)
+
+### Conclusions
+
+#### Best Balanced Accuracy Score
+
+| Model | Balanced Accuracy Score |
+| --- | --- |
+| Simple logistic regression | 0.9892813049736127 |
+| Naive random oversampling | 0.9946414201183431 |
+| SMOTE oversampling | 0.9946680739911509 |
+| Undersampling | 0.9932813049736127 |
+| Combination sampling with SMOTEENN | 0.9946680739911509 |
    
-   SMOTE oversampling and combination sampling with SMOTEENN had the best balanced accuracy scores.
+SMOTE oversampling and combination sampling with SMOTEENN had the best balanced accuracy scores.
 
-#### 2. Which model had the best recall score?
+#### Best Recall Score
 
-   The recall scores were as follows - 
-   * Simple logistic regression: high risk: 0.98, low risk: 0.99, average: 0.99
-   * Naive random oversampling: high risk: 1.00, low risk: 0.99, average: 0.99
-   * SMOTE oversampling: high risk: 1.00, low risk: 0.99, average: 0.99
-   * Undersampling: high risk: 0.99, low risk: 0.99, average: 0.99
-   * Combination sampling with SMOTEENN: high risk: 1.00, low risk: 0.99, average: 0.99
+| Model | High Risk | Low Risk | Average |
+| --- | --- | --- | --- |
+| Simple logistic regression | 0.98 | 0.99 | 0.99 |
+| Naive random oversampling | 1.00 | 0.99 | 0.99 | 
+| SMOTE oversampling | 1.00 | 0.99 | 0.99 |
+| Undersampling | 0.99 | 0.99 | 0.99 |
+| Combination sampling with SMOTEENN | 1.00 | 0.99 | 0.99 |
    
-   Naive random oversampling, SMOTE oversampling and Combination sampling with SMOTEENN have the best recall scores.
+Naive random oversampling, SMOTE oversampling and Combination sampling with SMOTEENN have the best recall scores.
 
-#### 3. Which model had the best geometric mean score?
+#### Best Geometric Mean Score
 
-   The geometric mean scores were as follows - 
-   * Simple logistic regression: high risk: 0.99, low risk: 0.99, average: 0.99
-   * Naive random oversampling: high risk: 0.99, low risk: 0.99, average: 0.99
-   * SMOTE oversampling: high risk: 0.99, low risk: 0.99, average: 0.99
-   * Undersampling: high risk: 0.99, low risk: 0.99, average: 0.99
-   * Combination sampling with SMOTEENN: 0.99, low risk: 0.99, average: 0.99
+| Model | High Risk | Low Risk | Average |
+| --- | --- | --- | --- |
+| Simple logistic regression | 0.99 | 0.99 | 0.99 |
+| Naive random oversampling | 0.99 | 0.99 | 0.99 |
+| SMOTE oversampling | 0.99 | 0.99 | 0.99 |
+| Undersampling | 0.99, | 0.99 | 0.99 |
+| Combination sampling with SMOTEENN | 0.99 | 0.99 | 0.99 |
    
-   Every model had the same geometric mean score.
-
+Every model had the same geometric mean score.
 
 ### Ensemble Learning
 
