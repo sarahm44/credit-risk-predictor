@@ -2,24 +2,17 @@
  
 ![Credit Risk](credit-risk.jpg)
 
-## Background
+## Overview
 
-Mortgages, student and auto loans, and debt consolidation are just a few examples of credit and loans that people seek online. Peer-to-peer lending services such as Loans Canada and Mogo let investors loan people money without using a bank. However, because investors always want to mitigate risk, a client has asked that you help them predict credit risk with machine learning techniques.
+This task required that I build and evaluate several machine learning models to predict credit risk using data you'd typically see from peer-to-peer lending services. 
 
-In this assignment you will build and evaluate several machine learning models to predict credit risk using data you'd typically see from peer-to-peer lending services. Credit risk is an inherently imbalanced classification problem (the number of good loans is much larger than the number of at-risk loans), so you will need to employ different techniques for training and evaluating models with imbalanced classes. You will use the imbalanced-learn and Scikit-learn libraries to build and evaluate models using the two following techniques:
+Credit risk is an inherently imbalanced classification problem (the number of good loans is much larger than the number of at-risk loans), so I employed different techniques for training and evaluating models with imbalanced classes. 
 
-1. [Resampling](#Resampling)
-2. [Ensemble Learning](#Ensemble-Learning)
+I used the imbalanced-learn and Scikit-learn libraries to build and evaluate models using the two following techniques, each contained in their own code file:
 
-- - -
+1. [Resampling](https://github.com/sarahm44/unit-11-assignment/blob/main/credit_risk_resampling.ipynb)
+2. [Ensemble Learning](https://github.com/sarahm44/unit-11-assignment/blob/main/credit_risk_ensemble.ipynb)
 
-## Completed Code Files
-
-The completed code files are as follows:
-
-[Resampling Notebook](https://github.com/sarahm44/unit-11-assignment/blob/main/credit_risk_resampling.ipynb)
-
-[Ensemble Notebook](https://github.com/sarahm44/unit-11-assignment/blob/main/credit_risk_ensemble.ipynb)
 
 - - -
 
