@@ -2,6 +2,20 @@
  
 ![](https://github.com/sarahm44/credit-risk-predictor/blob/main/images/credit-risk.jpg)
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Resampling](#resampling)
+  * [Logistic Regression](#logistic-regression)
+  * [Oversampling](#oversampling)
+  * [Undersampling](#undersampling)
+  * [Combination Sampling](#combination-sampling)
+  * [Conclusions](#conclusions)
+- [Ensemble Learning](#ensemble-learning)
+  * [Balanced Random Forest](#balanced-random-forest)
+  * [Easy Ensemble Classifier](#easy-ensemble-classifier)
+  * [Conclusions](#conclusions-1)
+
 ## Overview
 
 This task required that I build and evaluate several machine learning models to predict credit risk using data you'd typically see from peer-to-peer lending services. 
